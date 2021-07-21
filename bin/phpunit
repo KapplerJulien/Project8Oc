@@ -1,7 +1,6 @@
 #!/usr/bin/env php
 <?php
 
-<<<<<<< HEAD
 if (!ini_get('date.timezone')) {
     ini_set('date.timezone', 'UTC');
 }
@@ -18,15 +17,3 @@ if (is_file(dirname(__DIR__).'/vendor/phpunit/phpunit/phpunit')) {
 
     require dirname(__DIR__).'/vendor/symfony/phpunit-bridge/bin/simple-phpunit.php';
 }
-=======
-if (!file_exists(dirname(__DIR__).'/vendor/symfony/phpunit-bridge/bin/simple-phpunit.php')) {
-    echo "Unable to find the `simple-phpunit.php` script in `vendor/symfony/phpunit-bridge/bin/`.\n";
-    exit(1);
-}
-
-if (false === getenv('SYMFONY_PHPUNIT_DIR')) {
-    putenv('SYMFONY_PHPUNIT_DIR='.__DIR__.'/.phpunit');
-}
-
-require dirname(__DIR__).'/vendor/symfony/phpunit-bridge/bin/simple-phpunit.php';
->>>>>>> eead9363a128f29c44d68a20104a55e4cf0ea815
