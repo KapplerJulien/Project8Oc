@@ -4,14 +4,9 @@ namespace App\Controller;
 
 use App\Entity\Task;
 use App\Form\TaskType;
-<<<<<<< HEAD:src/Controller/TaskController.php
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-=======
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
->>>>>>> eead9363a128f29c44d68a20104a55e4cf0ea815:src/AppBundle/Controller/TaskController.php
 use Symfony\Component\HttpFoundation\Request;
 
 class TaskController extends AbstractController
