@@ -8,6 +8,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
 class TaskController extends AbstractController
 {
@@ -21,6 +23,8 @@ class TaskController extends AbstractController
 
     /**
      * @Route("/tasks/create", name="task_create")
+     * 
+     * @IsGranted("ROLE_USER")
      */
     public function createAction(Request $request)
     {
@@ -30,6 +34,8 @@ class TaskController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $user = $this->getUser();
+            $task->setUser($user);
             $em = $this->getDoctrine()->getManager();
 
             $em->persist($task);
@@ -47,6 +53,8 @@ class TaskController extends AbstractController
 
     /**
      * @Route("/tasks/{id}/edit", name="task_edit")
+     * 
+     * @IsGranted("ROLE_USER")
      */
     public function editAction(Task $task, Request $request)
     {
@@ -70,6 +78,8 @@ class TaskController extends AbstractController
 
     /**
      * @Route("/tasks/{id}/toggle", name="task_toggle")
+     * 
+     * @IsGranted("ROLE_USER")
      */
     public function toggleTaskAction(Task $task)
     {
@@ -83,6 +93,8 @@ class TaskController extends AbstractController
 
     /**
      * @Route("/tasks/{id}/delete", name="task_delete")
+     * 
+     * @IsGranted("ROLE_USER")
      */
     public function deleteTaskAction(Task $task)
     {
