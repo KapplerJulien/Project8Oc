@@ -8,7 +8,7 @@ Some feature I added :
 - Now, every task is related to a User. There is 2 types of user : Admin and of course User. 
 - Admin can delete own task or task with no User. User can only delete own task.
 - There is a page for task and finished task
-- Only Admin can create a new User
+- Only Admin can create a new/edit/delete User
 
 With all of this, there is some security on the site. If a member is not login, he can't do anything. 
 
@@ -16,10 +16,10 @@ With all of this, there is some security on the site. If a member is not login, 
 
 You have to be carefull if you want to install this project because :
 
-I used WAMPServer for the database, you can find it here : [lien]. If you have some problems with WampServer, don't worry, there are a lot of tutorials on internet. 
+I used WAMPServer for the database, you can find it here : [WAMPServer](https://www.wampserver.com/). If you have some problems with WampServer, don't worry, there are a lot of tutorials on internet. 
 You will find everything you need. Or you can also use the documentation.
 
-Then you need Symfony 4.4, if you need it : [lien]. You can download from this page and this is also the documentation. 
+Then you need Symfony 4.4, if you need it : [Symfony](https://symfony.com/doc/current/index.html). You can download from this page and this is also the documentation. 
 Symfony have a big documentation. If you don't know Symfony, everything is explain here. Most of the time, you just need this documentation.
 
 ## Install database
@@ -54,4 +54,14 @@ launch test with the coverage -> php -d xdebug.mode=coverage ./vendor/bin/phpuni
 
 ## Library
 
+### Doctrine & Fixtures
+
+[Doctrine](https://symfony.com/doc/current/doctrine.html)
+
+[Fixtures](https://symfony.com/doc/current/bundles/DoctrineFixturesBundle/index.html)
+
+[PhpUnit](https://symfony.com/doc/current/testing.html)
+
 ## CodeClimate
+
+![Image Code climate A](https://i.imgur.com/nfJKWgi.png)
