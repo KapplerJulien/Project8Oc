@@ -52,6 +52,18 @@ create/delete/edit tasks and users
 
 launch test with the coverage -> php -d xdebug.mode=coverage ./vendor/bin/phpunit --coverage-html resultTest/
 
+### Example 
+
+You can find here some user, if you want to test the site. 
+
+Pseudo : user
+
+Password : test
+
+Pseudo : admin
+
+Password : test
+
 ## Library
 
 ### Doctrine & Fixtures
